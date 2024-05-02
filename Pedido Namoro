@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namora comigo?</title>
+</head>
+
+
+<body>
+    <div id="conteudo">
+    <h2>Aceita namorar comigo?</h2>
+    <button class="btn" onclick="SIM()">SIM</button>
+    <button class="btn" onmouseover="desvia(this)">NÃO</button>
+    </div>
+</body>
+
+<style>
+#conteudo {
+    background: #f58296;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    text-align: center;
+    font-family: sans-serif;
+}
+.btn {
+    background: purple;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 80px;
+    border-radius: 5px;
+}
+
+</style>
+
+<script>
+    function SIM (){
+    alert("Te amo")
+}
+    function desvia(t){
+         var btn = t;
+         btn.style.position="absolute"; 
+         btn.style.bottom=geraPosiçao(10, 90);
+         btn.style.left=geraPosiçao(10, 90);
+        console.log("opa, desviei")
+    }
+
+    function geraPosiçao(min, max) {
+    return Math.random() * (max - min) + "%";
+}
+</script>
